@@ -1,6 +1,7 @@
 package com.cengizhanyavuz.account;
 
 import com.cengizhanyavuz.account.dto.CreateAccountRequest;
+import com.cengizhanyavuz.account.dto.CustomerDto;
 import com.cengizhanyavuz.account.model.Customer;
 
 import java.math.BigDecimal;
@@ -27,6 +28,9 @@ public class TestSupport {
 
     public Customer generateCustomer() {
         return new Customer("customer-id", "customer-name", "customer-surname", Set.of());
+    }
+    public CustomerDto generateCustomerDto() {
+        return new CustomerDto("customer-id", "name", "surname", Set.of());
     }
 
     public CreateAccountRequest generateCreateAccountRequest(int initialCredit) {
