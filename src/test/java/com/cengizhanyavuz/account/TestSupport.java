@@ -1,5 +1,6 @@
 package com.cengizhanyavuz.account;
 
+import com.cengizhanyavuz.account.dto.AccountCustomerDto;
 import com.cengizhanyavuz.account.dto.CreateAccountRequest;
 import com.cengizhanyavuz.account.dto.CustomerDto;
 import com.cengizhanyavuz.account.model.Customer;
@@ -31,6 +32,11 @@ public class TestSupport {
     }
     public CustomerDto generateCustomerDto() {
         return new CustomerDto("customer-id", "name", "surname", Set.of());
+    }
+    public AccountCustomerDto generateAccountCustomerDto(){
+        return new AccountCustomerDto("customer-id",
+                "customer-name",
+                "customer-surname");
     }
 
     public CreateAccountRequest generateCreateAccountRequest(int initialCredit) {
